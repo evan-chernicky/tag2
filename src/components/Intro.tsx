@@ -1,11 +1,7 @@
-import React, {useEffect, useState} from 'react'
-import Image from 'next/image'
-import logoTransparent from '../../assets/svgs/tag-logo-transparent.svg'
+import React, {useEffect} from 'react'
 
-function intro() {
+function Intro() {
 
-
-/* eslint-disable */
     useEffect(() => { 
         const canvas = document.querySelector('canvas') as HTMLCanvasElement;
         let progress: number = 0
@@ -26,7 +22,7 @@ function intro() {
             progress: 0,
             }
 
-            const render = () => {
+            function render() {
             if (!ctx) return
         
             canvas.width = window.innerWidth * window.devicePixelRatio
@@ -68,4 +64,4 @@ function intro() {
   )
 }
 
-export default intro
+export default Intro
