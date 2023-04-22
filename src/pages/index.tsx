@@ -1,11 +1,14 @@
 import Image from 'next/image'
+import Header from '../components/header';
 import surfaceBottom from '../../assets/images/surface-bottom.png'
 import northStar from '../../assets/images/north-star(overlay).png'
+import logo from '../../assets/images/tag-logo.png'
 
 export default function Home() {
   return (
     <main className={`min-h-screen`}>
       <div className=" w-full h-full fixed bg-[url('../../assets/images/bg-sky.png')] bg-cover">
+        <Header />
         <div className="flex justify-center items-center h-full z-20 relative">
           <h1 className="font-heading text-white text-6xl uppercase mb-32 text-center">It&apos;s an Exact Science</h1>
         </div>
