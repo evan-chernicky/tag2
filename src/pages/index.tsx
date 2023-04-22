@@ -2,7 +2,6 @@ import Image from 'next/image'
 import surfaceBottom from '../../assets/images/surface-bottom.png'
 import northStar from '../../assets/images/north-star(overlay).png'
 
-
 export default function Home() {
   return (
     <main className={`min-h-screen`}>
