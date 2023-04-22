@@ -11,3 +11,6 @@
 }
 
 
+.mask-image {
+  clip-path: url(#myClip);
+}
