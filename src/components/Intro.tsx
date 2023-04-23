@@ -34,7 +34,6 @@ function Intro() {
             const marginX = 50 * window.devicePixelRatio
             let scale = Math.min((canvas.width - 2 * marginX) / logo.width, 5)
             const currentEDashHeight = logo.eDashHeight * scale
-            console.log(progress)
             scale += progress * scale * (canvas.height / currentEDashHeight)
             
         
@@ -48,13 +47,22 @@ function Intro() {
             }
 
             requestAnimationFrame(render);
-        
+            
             window.addEventListener('resize', () => render())
 
             window.addEventListener('scroll', () => {
                 progress = window.scrollY / (document.documentElement.scrollHeight + window.innerHeight)
                 render()
             })
+
+            setTimeout(() => {
+                if (progress < 0.3) {
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth' 
+                      });                
+                    }
+              }, 5000);
 
 
         },[])
