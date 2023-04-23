@@ -44,9 +44,12 @@ function Intro() {
             ctx.clip(logoPath)
         
             ctx.clearRect(0, 0, canvas.width, canvas.height)
+            requestAnimationFrame(render);
             }
+
+            requestAnimationFrame(render);
         
-            window.addEventListener('resize', render())
+            window.addEventListener('resize', () => render())
 
             window.addEventListener('scroll', () => {
                 progress = window.scrollY / (document.documentElement.scrollHeight + window.innerHeight)
