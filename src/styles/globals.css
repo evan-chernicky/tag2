@@ -11,6 +11,7 @@
 }
 
 
-.mask-image {
-  clip-path: url(#myClip);
+.star {
+  transform: scale(0.5);
+  opacity: 0.7;
 }

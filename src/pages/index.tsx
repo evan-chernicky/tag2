@@ -32,7 +32,7 @@ export default function Home() {
               </motion.div>
             )}
           </AnimatePresence>          
-        <div className="absolute z-20 top-24 right-1/4">
+        <div className="star absolute z-20 top-24 right-1/4">
           <Image 
             className="object-cover object-center"
             src={northStar}
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className="absolute top-0 left-0 z-0">
           <Image 
-            className="object-cover object-center"
+            className="object-cover object-center h-screen"
             src={sky}
             alt="Background of beach"
             priority={true}
