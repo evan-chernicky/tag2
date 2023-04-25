@@ -11,6 +11,7 @@ export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const { scrollYProgress } = useScroll();
 
+    //set is visible on scroll
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
       if (latest <= 0.4) return setIsVisible(false)
       setIsVisible(true)
