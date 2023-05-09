@@ -3,9 +3,6 @@ import Image from 'next/image'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
 import Header from '../components/header';
 import Intro from '../components/Intro';
-import sky from '../../assets/images/bg-sky.png'
-import surfaceBottom from '../../assets/images/surface-bottom.png'
-import northStar from '../../assets/images/north-star(overlay).png'
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -20,7 +17,7 @@ export default function Home() {
   return (
     <motion.main className="min-h-[300vh] h-full" >
       <Intro/>
-      <div className=" w-full h-full fixed bg-[url('../../assets/images/bg-sky.png')] bg-cover">
+      <div className=" w-full h-full fixed bg-[url('../../assets/images/tag-landing-page-bg2.jpg')] bg-cover">
         <Header isVisible={isVisible} />
         <AnimatePresence>
             {isVisible && (
@@ -33,30 +30,6 @@ export default function Home() {
               </motion.div>
             )}
           </AnimatePresence>          
-        <div className="star absolute z-20 top-24 right-1/4">
-          <Image 
-            className="object-cover object-center"
-            src={northStar}
-            alt="North Star"
-            priority={true}
-          />
-        </div>   
-        <div className="absolute bottom-0 z-10">
-          <Image 
-            className="max-h-[650px] min-h-[500px] object-cover object-center"
-            src={surfaceBottom}
-            alt="Background of beach"
-            priority={true}
-          />
-        </div>
-        <div className="absolute top-0 left-0 z-0">
-          <Image 
-            className="object-cover object-center h-screen"
-            src={sky}
-            alt="Background of beach"
-            priority={true}
-          />
-        </div>
       </div>
     </motion.main>
   )
