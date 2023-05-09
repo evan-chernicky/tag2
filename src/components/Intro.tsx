@@ -58,14 +58,14 @@ function Intro() {
                 render()
             })
 
-            // setTimeout(() => {
-            //     if (progress < 0.3) {
-            //         window.scrollTo({
-            //             top: document.body.scrollHeight,
-            //             behavior: 'smooth' 
-            //           });                
-            //         }
-            //   }, 2000);
+            setTimeout(() => {
+                if (progress < 0.3) {
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth' 
+                      });                
+                    }
+              }, 2000);
 
 
         },[])
