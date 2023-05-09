@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Image from 'next/image'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
 import Header from '../components/header';
 import Intro from '../components/Intro';

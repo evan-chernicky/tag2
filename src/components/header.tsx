@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import Image from 'next/image'
-import logo from '../../assets/images/TAG_logo.svg'
+import logo from '../../assets/images/TAG_logo2.svg'
 
 type HeaderProps = {
   isVisible: boolean;
