@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
-  font-family: 'helvetica_neueregular';
-  src: url('./fonts/helvetica_93_black_extended-webfont.woff2') format('woff2'),
-       url('./fonts/helvetica_93_black_extended-webfont.woff') format('woff');
+  font-family: 'acumin_pro_wideextralight';
+  src: url('./fonts/acumin-pro-wide-extralight.woff-webfont.woff2') format('woff2'),
+       url('./fonts/acumin-pro-wide-extralight.woff-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+
 }
 
 

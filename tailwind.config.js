@@ -14,7 +14,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'heading': ['helvetica_neueregular']
+      'heading': ['acumin_pro_wideextralight']
     }
   },
   plugins: [],
