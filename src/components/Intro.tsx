@@ -45,7 +45,8 @@ function Intro() {
 
             const top = (canvas.height / 2 - (logo.height / 2) * scale) 
             const left = (canvas.width / 2 - (logo.width / 2) * scale) 
-            ctx.transform(scale, 0, 0, scale, left * logo.shiftX, top * logo.shiftY)
+            console.log(Math.min(1 + (progress * 1), 1.215))
+            ctx.transform(scale, 0, 0, scale, left, top * Math.min(1 + (progress * 5), 1.275))
             ctx.clip(logoPath)
         
             ctx.clearRect(0, 0, canvas.width, canvas.height )
@@ -58,14 +59,14 @@ function Intro() {
                 render()
             })
 
-            setTimeout(() => {
-                if (progress < 0.3) {
-                    window.scrollTo({
-                        top: document.body.scrollHeight,
-                        behavior: 'smooth' 
-                      });                
-                    }
-              }, 2000);
+            // setTimeout(() => {
+            //     if (progress < 0.3) {
+            //         window.scrollTo({
+            //             top: document.body.scrollHeight,
+            //             behavior: 'smooth' 
+            //           });                
+            //         }
+            //   }, 2000);
 
 
         },[])
