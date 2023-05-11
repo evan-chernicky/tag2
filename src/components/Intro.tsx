@@ -67,7 +67,7 @@ function Intro() {
                     }
               }, 2000);
 
-
+              render()
         },[])
 
 
