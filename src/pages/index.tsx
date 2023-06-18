@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
+import Image from 'next/image'
 import Header from '../components/header';
 import Intro from '../components/Intro';
+import mtnRange from '../../assets/images/mtn-range.png'
+import nightSky from '../../assets/images/night-sky-bg.jpg'
+
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -14,22 +18,15 @@ export default function Home() {
     })
 
   return (
-    <motion.main className="min-h-[300vh] h-full" >
+    <motion.main className="bg-black">
       <Intro/>
-      <div className=" w-full h-full fixed bg-[url('../../assets/images/tag-landing-page-bg2.jpg')] bg-cover">
         <Header isVisible={isVisible} />
-        <AnimatePresence>
-            {isVisible && (
-              <motion.div 
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0, scale: [1, 2, 2, 1, 1] }}
-                animate={{ opacity: [0, 0.25, 0.5, 1], scale: [1, 1.25, 1.25, 1, 1], transition: {delay: 0.3} }}
-                className="h-full flex justify-center items-center z-20 relative">
-                  <h1 className="font-heading text-white text-6xl uppercase text-center mb-32">It&apos;s an Exact Science</h1>
-              </motion.div>
-            )}
-          </AnimatePresence>          
-      </div>
+        <div className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
+          <div className=" text-white h-screen w-full flex items-end">
+            <Image className="height-[75vh] object-cover" src={mtnRange} alt="Mountain Range"/>
+          </div>
+        </div>
+        <div className="h-screen">test</div>
     </motion.main>
   )
 }
