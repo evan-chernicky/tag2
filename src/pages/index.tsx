@@ -3,8 +3,6 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import Header from '../components/header';
 import Intro from '../components/home/Intro';
 import Hero from '../components/home/HomeHero';
-import { number } from 'prop-types';
-
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -17,7 +15,7 @@ export default function Home() {
 
     //set is visible on scroll
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-      setStarPosition(scrollYProgress.current * 100)
+      setStarPosition(scrollYProgress.get() * 100)
 
       if (latest <= 0.4) return setIsVisible(false)
       setIsVisible(true)
@@ -25,8 +23,8 @@ export default function Home() {
 
 
     const starStyles = {
-      backgroundSize: "120% 150%",
-      backgroundPosition: `${starPosition}% 50%`,
+      backgroundSize: "120% 120%",
+      backgroundPosition: `${100 - starPosition}% 50%`,
       backgroundRepeat: "no-repeat"   
     }
 

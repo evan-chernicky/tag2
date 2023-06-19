@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import {Exo_2, Space_Grotesk } from '@next/font/google'
-import { gsap } from 'gsap'
 
 
 const exo = Exo_2({
@@ -19,10 +18,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main id="smooth-wrapper" className={`${spaceGrotesk.variable} ${exo.variable} font-sans`}>
-      <div id="smooth-content">
+    <main className={`${spaceGrotesk.variable} ${exo.variable} font-sans`}>
         <Component {...pageProps} />
-      </div>
     </main>
   )
 }

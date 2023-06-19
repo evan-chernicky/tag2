@@ -67,7 +67,7 @@ function Intro() {
 
             setTimeout(() => {
                 if (progress < 0.3) {
-                    const targetElement = document.getElementById('hero');
+                    const targetElement: HTMLElement = document.getElementById('hero') as HTMLElement;
                     gsap.to(window, { duration: 1.5, scrollTo: targetElement, ease: 'power2.inOut' });
                     }
               }, 2000);

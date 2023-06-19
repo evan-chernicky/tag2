@@ -1,16 +1,20 @@
 import React, {useEffect, useRef, useState  } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion';
+import { motion, useInView  } from 'framer-motion';
 import mtnRange from '../../../assets/images/mtn-range.png'
+import soldier from '../../../assets/images/tag-soldier-bg.png'
+
 
 
 function HomeHero() {
-    
+    const mountainRef = useRef(null)
     const elementRef = useRef<HTMLDivElement>(null);
     const [percentageVisible, setPercentageVisible] = useState(0);
+    const isMountainsVisible = useInView(mountainRef, {amount: 0.9, once: true })
+
     let x1 = 0 
     let x2 = 0
-  
+
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         const percentageVisible = Math.floor(entry.intersectionRatio * 100);
@@ -60,6 +64,8 @@ function HomeHero() {
 
     const accelerator = (percentageVisible * 3) - 200
 
+    console.log(accelerator / 100)
+
 
     const mountainStyles = {
       WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
@@ -71,10 +77,21 @@ function HomeHero() {
   return (
     <div ref={elementRef} id="hero" className=" text-white h-screen w-full flex items-end relative overflow-hidden	">
         <div className="absolute inset-0 m-auto max-w-auto max-h-auto flex justify-center flex-col	px-20 z-10">
-            <motion.h1 style={{translateX: x1 + '%', opacity: x1 * 0.08}} className="font-space text-[162px] mb-14">EXACTNESS</motion.h1>
-            <motion.h1 style={{translateX: x2 + '%', opacity: x1 * 0.075}} className="font-space text-[162px] text-right">IN ACTION</motion.h1>
+          <Image className="absolute inset-0 m-auto z-20" src={soldier} alt="Image of Soldier" />
+            <motion.h1  
+              initial={{ opacity: 0 }}
+              animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0}}
+              transition={{ ease: "easeIn", duration: 0.4 }}
+              style={{translateX: x1 + '%'}} 
+              className="font-space text-[162px] mb-26">EXACTNESS</motion.h1>
+            <motion.h1 
+              initial={{ opacity: 0 }}
+              animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ ease: "easeIn", duration: 0.4, delay: 0.4 }}
+              style={{translateX: x2 + '%', translateY: "80px"}} 
+              className="font-space text-[162px] text-right -translate-y-10">IN ACTION</motion.h1>
         </div>
-        <Image style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
+        <Image ref={mountainRef} style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
     </div>  
   )
 }
