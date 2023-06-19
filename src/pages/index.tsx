@@ -1,37 +1,39 @@
 import React, {useRef, useState} from 'react'
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
-import Header from '../components/header';
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"
+import Header from '../components/Header';
 import Intro from '../components/home/Intro';
 import Hero from '../components/home/HomeHero';
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [starPosition, setStarPosition] = useState<number>(100)
-    const ref = useRef(null);
+    const ref = useRef<HTMLElement | null>(null);
+    const fullPageRef = useRef<HTMLElement | null>(null);
     const { scrollYProgress } = useScroll({
       target: ref,
-      offset: ["end end", "start start"]
+      offset: ["start end", "end -300px"]
     });
 
     //set is visible on scroll
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
       setStarPosition(scrollYProgress.get() * 100)
 
-      if (latest <= 0.4) return setIsVisible(false)
+      console.log(latest)
+      if (latest <= 0.6) return setIsVisible(false)
       setIsVisible(true)
     })
 
 
     const starStyles = {
       backgroundSize: "120% 120%",
-      backgroundPosition: `${100 - starPosition}% 50%`,
+      backgroundPosition: `${(100 - starPosition) - 1}% 50%`,
       backgroundRepeat: "no-repeat"   
     }
 
   return (
-    <motion.main className="bg-black">
+    <motion.main className="bg-black" ref={fullPageRef}>
       <Intro />
-        <Header isVisible={isVisible} />
+        <Header isVisible={isVisible} fullPageRef={fullPageRef} />
         <motion.div ref={ref} style={starStyles} className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
             <Hero />
         </motion.div>

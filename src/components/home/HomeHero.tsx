@@ -64,9 +64,6 @@ function HomeHero() {
 
     const accelerator = (percentageVisible * 3) - 200
 
-    console.log(accelerator / 100)
-
-
     const mountainStyles = {
       WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
       maskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
