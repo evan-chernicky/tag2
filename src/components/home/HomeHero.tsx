@@ -46,6 +46,7 @@ function HomeHero() {
       };
     }, []);
 
+    //set percentages
     if (percentageVisible > 0 && percentageVisible <= 100) {
         x1 = 0.9 + (percentageVisible / 10)
         x2 = 0.9 + -(percentageVisible / 10)
