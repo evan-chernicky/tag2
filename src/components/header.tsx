@@ -12,19 +12,18 @@ function header({isVisible}: HeaderProps) {
   return (
     <AnimatePresence>
       {isVisible ? (
-      <motion.nav 
-        className="flex justify-left p-10 fixed w-full z-50"
-        initial={{ opacity: 0 }}
-        exit={{ opacity: 0}}
-        animate={{transition: {delay: 0.3}, opacity: 1 }}
+      <nav 
+        className="p-5 flex justify-left fixed w-full z-50 bg-white/10 h-[84px] items-center"
+        style={{backdropFilter: "blur(8px)"}}
         > 
           <Image 
               className="object-cover object-center"
               src={logo}
               alt="TAG"
               priority={true}
+              width={123}
           />
-      </motion.nav>
+      </nav>
       ) : null }
     </AnimatePresence>
   )

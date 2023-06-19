@@ -14,7 +14,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      'heading': ['acumin_pro_wideextralight']
+      'sans': ['var(--spaceGrotesk)'],
+      'space': ['var(--spaceGrotesk)'],
+      'exo': ['var(--exo)']
     }
   },
   plugins: [],

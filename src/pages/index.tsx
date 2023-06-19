@@ -1,10 +1,8 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion"
-import Image from 'next/image'
 import Header from '../components/header';
-import Intro from '../components/Intro';
-import mtnRange from '../../assets/images/mtn-range.png'
-import nightSky from '../../assets/images/night-sky-bg.jpg'
+import Intro from '../components/home/Intro';
+import Hero from '../components/home/HomeHero';
 
 
 export default function Home() {
@@ -19,12 +17,10 @@ export default function Home() {
 
   return (
     <motion.main className="bg-black">
-      <Intro/>
+      <Intro />
         <Header isVisible={isVisible} />
         <div className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
-          <div className=" text-white h-screen w-full flex items-end">
-            <Image className="height-[75vh] object-cover" src={mtnRange} alt="Mountain Range"/>
-          </div>
+            <Hero />
         </div>
         <div className="h-screen">test</div>
     </motion.main>

@@ -60,8 +60,7 @@ function Intro() {
 
             setTimeout(() => {
                 if (progress < 0.3) {
-                    window.scrollTo({
-                        top: document.body.scrollHeight,
+                    document.getElementById('hero')?.scrollIntoView({
                         behavior: 'smooth' 
                       });                
                     }
