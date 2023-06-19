@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState  } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion';
-import { useScrollPercentage } from 'react-scroll-percentage'
 import mtnRange from '../../../assets/images/mtn-range.png'
 
 
