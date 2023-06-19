@@ -6,12 +6,12 @@ import mtnRange from '../../../assets/images/mtn-range.png'
 
 function HomeHero() {
     
-    const elementRef = useRef(null);
+    const elementRef = useRef<HTMLDivElement>(null);
     const [percentageVisible, setPercentageVisible] = useState(0);
     let x1 = 0 
     let x2 = 0
   
-    const handleIntersection = (entries, observer) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         const percentageVisible = Math.floor(entry.intersectionRatio * 100);
         setPercentageVisible(percentageVisible);
