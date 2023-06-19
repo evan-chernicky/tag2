@@ -17,6 +17,16 @@ module.exports = {
       'sans': ['var(--spaceGrotesk)'],
       'space': ['var(--spaceGrotesk)'],
       'exo': ['var(--exo)']
+    },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.1em',
+      widest: '2.4px',   
     }
   },
   plugins: [],

@@ -35,7 +35,16 @@ export default function Home() {
         <motion.div ref={ref} style={starStyles} className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
             <Hero />
         </motion.div>
-        <div className="h-screen">test</div>
+        <div className="py-20 px-5 text-center text-white exo max-w-4xl mx-auto">
+          <motion.div
+              initial={{ opacity: 0, translateY: "25%" }}
+              whileInView={{ opacity: 1, translateY: "0%" }}
+              transition={{ ease: "easeOut", duration: 0.3 }}
+          >
+            <h2 className="text-xs font-bold uppercase mb-6 tracking-widest">Our Mission</h2>
+            <p className="text-2xl leading-9">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud.</p>
+          </motion.div>
+        </div>
     </motion.main>
   )
 }
