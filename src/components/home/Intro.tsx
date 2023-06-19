@@ -1,4 +1,9 @@
 import React, {useEffect} from 'react'
+import { gsap } from "gsap";
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 
 function Intro() {
 
@@ -58,16 +63,23 @@ function Intro() {
                 render()
             })
 
+
+
             setTimeout(() => {
                 if (progress < 0.3) {
-                    document.getElementById('hero')?.scrollIntoView({
-                        behavior: 'smooth' 
-                      });                
+                    const targetElement = document.getElementById('hero');
+                    gsap.to(window, { duration: 1.5, scrollTo: targetElement, ease: 'power2.inOut' });
                     }
               }, 2000);
 
               render()
-        },[])
+
+
+
+              
+        },[])    
+
+
 
 
   return (

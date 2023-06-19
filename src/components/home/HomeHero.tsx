@@ -58,13 +58,23 @@ function HomeHero() {
         x2 = 1 + -(percentageVisible / 10)
     }
 
+    const accelerator = (percentageVisible * 3) - 200
+
+
+    const mountainStyles = {
+      WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
+      maskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
+      maskRepeat: "no-repeat",
+      maskSize: "cover",
+    }
+
   return (
     <div ref={elementRef} id="hero" className=" text-white h-screen w-full flex items-end relative overflow-hidden	">
-        <div className="absolute inset-0 m-auto max-w-auto max-h-auto flex justify-center flex-col	px-20">
-            <motion.h1 style={{translateX: x1 + '%'}} className="font-space text-[162px] mb-14">EXACTNESS</motion.h1>
-            <motion.h1 style={{translateX: x2 + '%'}} className="font-space text-[162px] text-right">IN ACTION</motion.h1>
+        <div className="absolute inset-0 m-auto max-w-auto max-h-auto flex justify-center flex-col	px-20 z-10">
+            <motion.h1 style={{translateX: x1 + '%', opacity: x1 * 0.08}} className="font-space text-[162px] mb-14">EXACTNESS</motion.h1>
+            <motion.h1 style={{translateX: x2 + '%', opacity: x1 * 0.075}} className="font-space text-[162px] text-right">IN ACTION</motion.h1>
         </div>
-        <Image className="h-[70vh] object-cover" src={mtnRange} alt="Mountain Range"/>
+        <Image style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
     </div>  
   )
 }
