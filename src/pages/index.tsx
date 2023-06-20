@@ -18,7 +18,6 @@ export default function Home() {
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
       setStarPosition(scrollYProgress.get() * 100)
 
-      console.log(latest)
       if (latest > 0.6) return setIsVisible(true)
       setIsVisible(false)
     })
@@ -26,17 +25,18 @@ export default function Home() {
 
     const starStyles = {
       backgroundSize: "120% 120%",
-      backgroundPosition: `${(100 - starPosition) - 1}% 50%`,
+      backgroundPosition: `50% ${(100 - starPosition) - 1}%`,
       backgroundRepeat: "no-repeat"   
     }
+
 
   return (
     <motion.main className="bg-black" ref={fullPageRef}>
       <Intro />
         <Header isVisible={isVisible} fullPageRef={fullPageRef.current} />
-        <motion.div ref={ref} style={starStyles} className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
-            <Hero />
-        </motion.div>
+            <motion.div ref={ref} style={starStyles} className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
+                <Hero />
+            </motion.div>
         <div className="py-20 px-5 text-center text-white exo max-w-4xl mx-auto">
           <motion.div
               initial={{ opacity: 0, translateY: "25%" }}
