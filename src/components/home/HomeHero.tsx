@@ -90,8 +90,8 @@ function HomeHero() {
               initial={{ opacity: 0 }}
               animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ ease: "easeIn", duration: 0.4, delay: 1.8 }}
-              style={{translateX: x2 + '%', translateY: "20px"}} 
-              className="font-space text-[162px] text-right -translate-y-10 z-20 mr-12">IN ACTION</motion.h1>
+              style={{translateX: x2 + '%', translateY: "0px"}} 
+              className="font-space text-[162px] text-right z-20 mr-12">IN ACTION</motion.h1>
         </div>
         <motion.div
             initial={{ opacity: 0 }}
