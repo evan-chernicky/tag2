@@ -73,21 +73,33 @@ function HomeHero() {
   return (
     <div ref={elementRef} id="hero" className=" text-white h-screen w-full flex items-end relative overflow-hidden	">
         <div className="absolute inset-0 m-auto max-w-auto max-h-auto flex justify-center flex-col	px-20 z-10">
-          <Image className="absolute inset-0 m-auto z-20" src={soldier} alt="Image of Soldier" />
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ ease: "easeIn", duration: 0.4, delay: 0.2 }}
+          >
+            <Image className="absolute inset-0 m-auto z-20" src={soldier} alt="Image of Soldier" />
+          </motion.div>
             <motion.h1  
               initial={{ opacity: 0 }}
               animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0}}
-              transition={{ ease: "easeIn", duration: 0.4 }}
+              transition={{ ease: "easeIn", duration: 0.4, delay: 0.4 }}
               style={{translateX: x1 + '%'}} 
               className="font-space text-[162px] mb-26">EXACTNESS</motion.h1>
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ ease: "easeIn", duration: 0.4, delay: 0.4 }}
+              transition={{ ease: "easeIn", duration: 0.4, delay: 0.8 }}
               style={{translateX: x2 + '%', translateY: "80px"}} 
               className="font-space text-[162px] text-right -translate-y-10">IN ACTION</motion.h1>
         </div>
-        <Image ref={mountainRef} style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 0.4 }}
+        >
+          <Image ref={mountainRef} style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
+        </motion.div>
     </div>  
   )
 }
