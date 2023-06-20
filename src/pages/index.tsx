@@ -19,8 +19,8 @@ export default function Home() {
       setStarPosition(scrollYProgress.get() * 100)
 
       console.log(latest)
-      if (latest <= 0.6) return setIsVisible(false)
-      setIsVisible(true)
+      if (latest > 0.6) return setIsVisible(true)
+      setIsVisible(false)
     })
 
 
