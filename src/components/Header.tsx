@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, RefObject } from "framer-motion"
 import Image from 'next/image'
 import logo from '../../assets/images/TAG_logo2.svg'
 
 type HeaderProps = {
   isVisible: boolean;
-  fullPageRef: HTMLElement | null
+  fullPageRef: RefObject<HTMLElement> | null;
 }
 
 function Header({isVisible, fullPageRef}: HeaderProps) {
 
   const [isScrollingDown, setIsScrollingDown] = useState<boolean>(false)
-  const [prevScrollPosition, setPrevScrollPosition] = useState<number>(false)
+  const [prevScrollPosition, setPrevScrollPosition] = useState<number>(0)
 
+  
   const { scrollYProgress } = useScroll({
     target: fullPageRef,
-    offset: ["start end", "end -300px"]
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -28,7 +28,6 @@ function Header({isVisible, fullPageRef}: HeaderProps) {
     setPrevScrollPosition(current)
   })
 
-  console.log(scrollYProgress)
 
   return (
     <AnimatePresence>

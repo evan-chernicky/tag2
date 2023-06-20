@@ -7,8 +7,8 @@ import Hero from '../components/home/HomeHero';
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [starPosition, setStarPosition] = useState<number>(100)
-    const ref = useRef<HTMLElement | null>(null);
-    const fullPageRef = useRef<HTMLElement | null>(null);
+    const ref = useRef<HTMLDivElement>(null);
+    const fullPageRef = useRef(null);
     const { scrollYProgress } = useScroll({
       target: ref,
       offset: ["start end", "end -300px"]
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <motion.main className="bg-black" ref={fullPageRef}>
       <Intro />
-        <Header isVisible={isVisible} fullPageRef={fullPageRef} />
+        <Header isVisible={isVisible} fullPageRef={fullPageRef.current} />
         <motion.div ref={ref} style={starStyles} className="min-h-[375vh] w-full h-full bg-[url('../../assets/images/night-sky-bg.jpg')] bg-cover bg-fixed flex items-end">
             <Hero />
         </motion.div>
