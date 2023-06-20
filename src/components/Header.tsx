@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import { motion, AnimatePresence, useScroll, useMotionValueEvent, RefObject } from "framer-motion"
+import React, {useState} from 'react'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent} from "framer-motion"
 import Image from 'next/image'
 import logo from '../../assets/images/TAG_logo2.svg'
 
 type HeaderProps = {
   isVisible: boolean;
-  fullPageRef: RefObject<HTMLElement> | null;
+  fullPageRef: React.RefObject<HTMLElement> | null | undefined;
 }
 
 function Header({isVisible, fullPageRef}: HeaderProps) {
@@ -15,7 +15,7 @@ function Header({isVisible, fullPageRef}: HeaderProps) {
 
   
   const { scrollYProgress } = useScroll({
-    target: fullPageRef,
+    target: fullPageRef ? fullPageRef : undefined,
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {

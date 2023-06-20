@@ -7,7 +7,7 @@ import Hero from '../components/home/HomeHero';
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
     const [starPosition, setStarPosition] = useState<number>(100)
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef(null);
     const fullPageRef = useRef(null);
     const { scrollYProgress } = useScroll({
       target: ref,
