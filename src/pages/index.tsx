@@ -41,7 +41,7 @@ export default function Home() {
           <motion.div
               initial={{ opacity: 0, translateY: "25%" }}
               whileInView={{ opacity: 1, translateY: "0%" }}
-              transition={{ ease: "easeOut", duration: 0.3 }}
+              transition={{ ease: "easeIn", duration: 0.3 }}
           >
             <h2 className="text-xs font-bold uppercase mb-6 tracking-widest">Our Mission</h2>
             <p className="text-2xl leading-9">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud.</p>

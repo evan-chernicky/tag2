@@ -76,28 +76,28 @@ function HomeHero() {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ ease: "easeIn", duration: 0.4, delay: 0.6 }}
+            transition={{ ease: "easeIn", duration: 0.4, delay: 1 }}
           >
             <Image className="absolute inset-0 m-auto z-20" src={soldier} alt="Image of Soldier" />
           </motion.div>
             <motion.h1  
               initial={{ opacity: 0 }}
               animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0}}
-              transition={{ ease: "easeIn", duration: 0.4, delay: 1 }}
+              transition={{ ease: "easeIn", duration: 0.4, delay: 1.4 }}
               style={{translateX: x1 + '%'}} 
               className="font-space text-[162px] mb-26">EXACTNESS</motion.h1>
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={isMountainsVisible ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ ease: "easeIn", duration: 0.4, delay: 1.4 }}
-              style={{translateX: x2 + '%', translateY: "80px"}} 
-              className="font-space text-[162px] text-right -translate-y-10">IN ACTION</motion.h1>
+              transition={{ ease: "easeIn", duration: 0.4, delay: 1.8 }}
+              style={{translateX: x2 + '%', translateY: "20px"}} 
+              className="font-space text-[162px] text-right -translate-y-10 z-20 mr-12">IN ACTION</motion.h1>
         </div>
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{amount:0.9, once:true}}
-            transition={{ ease: "easeIn", duration: 0.4, delay: 0.2}}
+            transition={{ ease: "easeIn", duration: 0.8, delay: 0.2}}
         >
           <Image ref={mountainRef} style={mountainStyles} className="h-[70vh] object-cover mountains" src={mtnRange} alt="Mountain Range"/>
         </motion.div>
