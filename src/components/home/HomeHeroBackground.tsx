@@ -98,7 +98,12 @@ function HomeHeroBackground({starPosition}: HeaderProps) {
     <div  className={`sticky h-screen w-full top-0 overflow-hidden`} style={{transform: `translateY(${((100 - starPosition) * 0.2) - 15}%)`}}>
         <div className="w-screen h-screen " >
         {drawStars}
-        <Image className="absolute z-10 h-screen object-cover bottom-0" src={NightSky} alt="" />
+        <Image 
+            className="absolute z-10 h-screen object-cover bottom-0" 
+            src={NightSky} 
+            alt="" 
+            priority={true}
+        />
         </div>
     </div>
   )
