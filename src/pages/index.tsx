@@ -24,7 +24,7 @@ export default function Home() {
 
     //set is visible on scroll
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-      //setStarPosition(scrollYProgress.get() * 100)
+      setStarPosition(scrollYProgress.get() * 100)
 
       if (latest > 0.6) return setIsVisible(true)
       setIsVisible(false)
@@ -32,10 +32,24 @@ export default function Home() {
 
 
       const drawStars = useMemo(() => {
+
         const stars: Star[] = [];
-      
+        const bgScale: number = 1.2
         let bg: any
-        let canvasCounter = 0;
+        let canvasCounter: number = 0;
+
+        function preload(p5: p5Types) {
+          if (canvasCounter > 1) return  
+
+          bg = p5.loadImage(NightSky.src);
+          
+        }
+
+        function windowResized(p5: p5Types) {
+  
+          p5.resizeCanvas(p5.windowWidth * bgScale, p5.windowHeight * bgScale);
+      
+        }
   
         class Star {
           p5: p5Types;
@@ -63,29 +77,45 @@ export default function Home() {
         const setup = (p5: p5Types, canvasParentRef: Element) => {
           canvasCounter = canvasCounter + 1;
           if (canvasCounter > 1) return
-          bg = p5.loadImage(NightSky.src);
-          p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
+
+          p5.createCanvas(p5.windowWidth * bgScale, p5.windowHeight * bgScale).parent(canvasParentRef);
   
           for (var i = 0; i < 200; i++) {
             stars[i] = new Star(p5);
           }
+
         }
     
       const draw = (p5: p5Types) => {
-        if (!bg) return; // Check if the background image is loaded before drawing
-        p5.background(bg);
-  
+        if (!bg) return;  // Check if the background image is loaded before drawing      
+        p5.clear();
+        p5.background('rgba(255,255,255, 0)');      
+
         for (var i = 0; i < stars.length; i++) {
           stars[i].draw();
         }
       };
 
-      return <Sketch setup={setup} draw={draw}/>
+      return <Sketch className="absolute bottom-0 z-20" setup={setup} draw={draw} preload={preload} windowResized={windowResized}/>
 
       },[])
 
+      useEffect(() => {
+        const interval = setInterval(() => {
+          const repeatCanvas = document.querySelector('#defaultCanvas1') // Replace with the ID of the element you want to check
+    
+          if (repeatCanvas) {
+            repeatCanvas.remove()
+            clearInterval(interval); // Stop the interval once the element is found or condition is met
+          }
+        }, 1000); // Check every 1 second (adjust as needed)
+    
+        return () => {
+          clearInterval(interval); // Clean up the interval when the component unmounts
+        };
+      }, []);
 
-
+      console.log(starPosition)
 
 
   return (
@@ -93,8 +123,11 @@ export default function Home() {
       <Intro />
         <Header isVisible={isVisible} fullPageRef={fullPageRef.current} />
             <motion.div ref={ref} className="relative min-h-[375vh] w-full h-full">
-                <div  className={`thing fixed w-full h-full`} style={{transform: `translateY(-${starPosition * 1.5}px)`}}>
-                {drawStars}
+                <div  className={`sticky h-screen w-full top-0`} style={{transform: `translateY(${starPosition}%)`}}>
+                  <div className="w-full h-screen" >
+                    {drawStars}
+                    <Image className="absolute z-10 h-screen object-cover bottom-0" src={NightSky} alt="" />
+                  </div>
                 </div>
                 <div className="text-white absolute bottom-0">
                     <Hero />
