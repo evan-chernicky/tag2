@@ -115,16 +115,20 @@ export default function Home() {
         };
       }, []);
 
-      console.log(starPosition)
-
+      const starStyles = {
+        backgroundSize: "120% 120%",
+        backgroundPosition: `50% ${(100 - starPosition) - 1}%`,
+        backgroundRepeat: "no-repeat"   
+      }
+  
 
   return (
     <motion.main className="bg-black" ref={fullPageRef}>
       <Intro />
         <Header isVisible={isVisible} fullPageRef={fullPageRef.current} />
             <motion.div ref={ref} className="relative min-h-[375vh] w-full h-full">
-                <div  className={`sticky h-screen w-full top-0`} style={{transform: `translateY(${starPosition}%)`}}>
-                  <div className="w-full h-screen" >
+                <div  className={`sticky h-screen w-full top-0 overflow-hidden`} style={{transform: `translateY(${((100 - starPosition) * 0.2) - 15}%)`}}>
+                  <div className="w-screen h-screen " >
                     {drawStars}
                     <Image className="absolute z-10 h-screen object-cover bottom-0" src={NightSky} alt="" />
                   </div>
