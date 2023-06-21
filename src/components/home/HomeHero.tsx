@@ -77,7 +77,7 @@ function HomeHero() {
     }
 
   return (
-    <div ref={elementRef} id="hero" className=" text-white h-screen w-full flex items-end relative overflow-hidden	">
+    <div ref={elementRef} id="hero" className="absolute bottom-0 text-white h-screen w-full flex items-end relative overflow-hidden">
         <div className="absolute inset-0 m-auto max-w-auto max-h-auto flex justify-center flex-col	px-20 z-10">
           <motion.div 
             initial={{ opacity: 0 }}
