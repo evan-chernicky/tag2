@@ -61,11 +61,17 @@ function HomeHero() {
         x2 = 1 + -(percentageVisible / 10)
     }
 
-    const accelerator = (percentageVisible * 3) - 200
+    let accelerator = function() {      
+      if ((percentageVisible * 3) - 200 <= 100) return (percentageVisible * 3) - 200
+      const lastTwoDigits = ((percentageVisible * 1.97) - 200) % 100
+      return 100 - lastTwoDigits
+    }
+
+    console.log(accelerator())
 
     const mountainStyles = {
-      WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
-      maskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator}%, transparent 100%)`,
+      WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator()}%, transparent 100%)`,
+      maskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator()}%, transparent 100%)`,
       maskRepeat: "no-repeat",
       maskSize: "cover",
     }
