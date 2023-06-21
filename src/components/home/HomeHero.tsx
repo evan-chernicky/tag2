@@ -63,7 +63,7 @@ function HomeHero() {
 
     let accelerator = function() {      
       if ((percentageVisible * 3) - 200 <= 100) return (percentageVisible * 3) - 200
-      const lastTwoDigits = ((percentageVisible * 1.97) - 200) % 100
+      const lastTwoDigits = ((percentageVisible * 2) - 200) % 100
       return 100 - lastTwoDigits
     }
 
