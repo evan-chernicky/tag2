@@ -83,7 +83,7 @@ function Intro() {
 
 
   return (
-    <div className="fixed min-h-screen w-full z-50 mask-image">
+    <div className="fixed min-h-screen w-full z-50 mask-image pointer-events-none">
         <canvas className="w-full h-full fixed"></canvas>
     </div>
   )

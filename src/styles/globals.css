@@ -114,3 +114,25 @@
   animation:move-background 70s linear infinite;
 	
 }
+
+.gray-gradient {
+	position: relative;
+	min-height: 200px;
+	z-index: 1;
+  }
+  
+  .gray-gradient::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(353deg, #070707 0%, #191919 100%);;
+	z-index: -1;
+	transition: opacity 0.3s ease-out;
+	opacity: 0;
+  }
+  .gray-gradient:hover::before {
+	opacity: 1;
+  }

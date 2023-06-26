@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react'
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import Header from '../components/Header';
 import Intro from '../components/home/Intro';
+import OurExpertise from '../components/home/OurExpertise';
 import Hero from '../components/home/HomeHero';
 import HomeHeroBackground from '../components/home/HomeHeroBackground';
 
@@ -44,6 +45,9 @@ export default function Home() {
             <p className="text-2xl leading-9">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud.</p>
           </motion.div>
         </div>
+        <div className="py-20 px-5 text-white exo mx-auto relative">
+          <OurExpertise />
+        </div>  
     </motion.main>
   )
 }
