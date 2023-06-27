@@ -5,6 +5,8 @@ import Intro from '../components/home/Intro';
 import OurExpertise from '../components/home/OurExpertise';
 import Hero from '../components/home/HomeHero';
 import HomeHeroBackground from '../components/home/HomeHeroBackground';
+import FiftyFiftyRight from '../components/home/FiftyFiftyRight';
+
 
 export default function Home() {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -48,6 +50,9 @@ export default function Home() {
         <div className="py-20 px-5 text-white exo mx-auto relative">
           <OurExpertise />
         </div>  
+        <div className="py-20 px-5 text-white exo mx-auto relative">
+          <FiftyFiftyRight />
+        </div> 
     </motion.main>
   )
 }

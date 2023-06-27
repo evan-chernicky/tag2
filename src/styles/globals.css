@@ -40,6 +40,49 @@
   transform: skew(21deg);
 }
 
+.skew-btn-purple {
+	color: #fff;
+	font-weight: 700;
+	background: transparent linear-gradient(171deg, #683D8C 0%, #341F46 100%);
+	text-align: center;
+	text-decoration: none;
+	padding: 18px 33px;
+	display: inline-block;
+	transform: skew(-21deg);
+	position: relative;
+	transition: background-color 0.2s, color 0.2s;
+	background-clip: padding-box; /* !importanté */
+	border: solid 1px transparent; /* !importanté */
+    box-sizing: border-box;
+
+  }
+
+  .skew-btn-purple::before {
+	content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: 1px; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: #000;
+	transition: 0.3s;
+  }
+
+  .skew-btn-purple:hover::before {
+	background: transparent linear-gradient(171deg, #683D8C 0%, #341F46 100%);
+  }
+  
+  .skew-btn-purple:hover {
+	color: #fff;
+	background-color: #000;
+  }
+  
+  .skew-btn-purple > span {
+	display: inline-block;
+	transform: skew(21deg);
+  }
+  
+
 
 
 @keyframes move-background {
