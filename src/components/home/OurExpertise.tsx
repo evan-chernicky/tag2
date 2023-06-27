@@ -4,7 +4,7 @@ import Bullseye from "../../../assets/svgs/Bullseye"
 import Compass from "../../../assets/svgs/Compass"
 import Clock from "../../../assets/svgs/Clock"
 
-const staggerMenuItems = stagger(0.3, { startDelay: 0.15 });
+const staggerMenuItems = stagger(0.3, { startDelay: 0.5 });
 
 function useExpertiseStagger(isInView: boolean) {
     const [scope, animate] = useAnimate();
@@ -14,8 +14,8 @@ function useExpertiseStagger(isInView: boolean) {
       animate(
         "li",
         isInView
-          ? { opacity: 1, translateY: "25%" }
-          : { opacity: 0 },
+          ? { opacity: 1, y: "0%" }
+          : { opacity: 0, y: "25%" },
         {
           duration: 0.2,
           delay: isInView ? staggerMenuItems : 0
