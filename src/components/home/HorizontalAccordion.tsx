@@ -1,4 +1,7 @@
 import React, {useEffect} from 'react'
+import AccordionPanel from './Cards/AccordionPanel'
+import {accordionSlides} from '../../data/HorizontalAccordionData'
+
 
 function HorizontalAccordion() {
 
@@ -21,7 +24,6 @@ function HorizontalAccordion() {
                 const accordionContent: HTMLElement | null = panel.querySelector('.accordiono-content')
                 removeActiveClasses()
                 panel.classList.add('active')
-                console.log(panel.offsetWidth)
                 panel.style.maxWidth = '100%'
                 if (accordionContent) {
                     accordionContent.style.maxWidth = '100%'
@@ -32,46 +34,7 @@ function HorizontalAccordion() {
 
   return (
     <div className="accordion-container">
-        <div className="accordion-panel active">
-            <h2 className="accordion-title">01 Design Service</h2>
-            <div className="relative">
-                <div className=" h-full absolute left-0 top-0">
-                    test
-                </div>
-            </div>
-        </div>
-        <div className="accordion-panel">
-            <h2 className="accordion-title">01 Design Service</h2>
-            <div className="relative">
-                <div className=" h-full absolute left-0 top-0">
-                    test
-                </div>
-            </div>
-        </div>
-        <div className="accordion-panel">
-            <h2 className="accordion-title">01 Design Service</h2>
-            <div className="relative">
-                <div className=" h-full absolute left-0 top-0">
-                    test
-                </div>
-            </div>
-        </div>
-        <div className="accordion-panel">
-            <h2 className="accordion-title">01 Design Service</h2>
-            <div className="relative">
-                <div className=" h-full absolute left-0 top-0">
-                    test
-                </div>
-            </div>
-        </div>
-        <div className="accordion-panel">
-            <h2 className="accordion-title">01 Design Service</h2>
-            <div className="relative">
-                <div className=" h-full absolute left-0 top-0">
-                    test
-                </div>
-            </div>
-        </div>
+        {accordionSlides.map((slide, index) => <AccordionPanel key={index} index={index} slide={slide} />)}
     </div>
   )
 }

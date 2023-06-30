@@ -67,8 +67,6 @@ function HomeHero() {
       return 100 - lastTwoDigits
     }
 
-    console.log(accelerator())
-
     const mountainStyles = {
       WebkitMaskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator()}%, transparent 100%)`,
       maskImage: `linear-gradient(to top, rgba(0, 0, 0, 1) ${accelerator()}%, transparent 100%)`,
