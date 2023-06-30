@@ -7,7 +7,7 @@ import Hero from '../components/home/HomeHero';
 import HomeHeroBackground from '../components/home/HomeHeroBackground';
 import FiftyFiftyRight from '../components/home/FiftyFiftyRight';
 import HorizontalAccordion from '../components/home/HorizontalAccordion';
-
+import JoinOurTeam from '../components/home/JoinOurTeam';
 
 
 export default function Home() {
@@ -58,6 +58,9 @@ export default function Home() {
         <div className="py-20 px-5 text-white exo mx-auto relative">
           <HorizontalAccordion />
         </div> 
+        <div className="text-white">
+          <JoinOurTeam />
+        </div>
     </motion.main>
   )
 }

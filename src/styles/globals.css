@@ -236,3 +236,18 @@
 	width: calc(100vw - 445px);
 	padding: 58px;
   }
+
+  .marquee {
+	overflow: hidden;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	display: flex;
+  }
+  
+  .marquee h2{
+	font-size: 162px;
+	white-space: nowrap;
+	text-transform: uppercase;
+	margin: 0 10px;
+	color: #707070;
+  }
