@@ -193,8 +193,6 @@
 	position: relative;
 	transition: all 700ms ease-in;
 	overflow: hidden;
-	border-bottom: 1px solid #707070;
-	border-top: 1px solid #707070;
   }
 
   .accordion-title {
@@ -209,19 +207,17 @@
     align-items: center;
 	border-left: 1px solid #707070;
 	border-right: 1px solid #707070;
-
+	font-size: 46px;
   }
+  
+  .accordion-panel:last-of-type h2 {
+    border-right: 0;
+}
 
 
   .accordion-panel.active {
 	flex: 5;
 	max-width: 100%;
-  }
-  
-  .active h2 {
-	opacity: 1;
-	transition: opacity 0.3s ease-in 0.4s;
-
   }
 
   .accordion-container {
@@ -229,6 +225,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	margin: 0 auto;
+	border-bottom: 1px solid #707070;
+	border-top: 1px solid #707070;
+	border-right: 1px solid #707070;
   }
-
-  .accordion-content-container {}
