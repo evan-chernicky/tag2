@@ -179,3 +179,56 @@
   .gray-gradient:hover::before {
 	opacity: 1;
   }
+
+
+  .accordion-panel {
+	max-width: 77px;
+	display: flex;
+	align-items: center;
+	height: 80vh;
+	color: #fff;
+	cursor: pointer;
+	flex: 0.5;
+	margin: var(--gutter-small);
+	position: relative;
+	transition: all 700ms ease-in;
+	overflow: hidden;
+	border-bottom: 1px solid #707070;
+	border-top: 1px solid #707070;
+  }
+
+  .accordion-title {
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+	text-orientation: sideways-right;
+	width: 77px;
+    height: 100%;
+    text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border-left: 1px solid #707070;
+	border-right: 1px solid #707070;
+
+  }
+
+
+  .accordion-panel.active {
+	flex: 5;
+	max-width: 100%;
+  }
+  
+  .active h2 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+
+  }
+
+  .accordion-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0 auto;
+  }
+
+  .accordion-content-container {}
