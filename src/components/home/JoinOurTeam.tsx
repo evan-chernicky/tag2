@@ -26,7 +26,7 @@ function JoinOurTeam() {
           }
 
           const timeout = setTimeout(() => {
-            Marquee('.marquee', 0.2);
+            Marquee('.marquee', 0.35);
           }, 0);
         
           return () => clearTimeout(timeout);

@@ -246,8 +246,9 @@
   
   .marquee h2{
 	font-size: 162px;
+	line-height: 185px;
 	white-space: nowrap;
 	text-transform: uppercase;
-	margin: 0 10px;
+	margin: 0 15px;
 	color: #707070;
   }

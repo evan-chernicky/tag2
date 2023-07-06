@@ -8,6 +8,7 @@ import HomeHeroBackground from '../components/home/HomeHeroBackground';
 import FiftyFiftyRight from '../components/home/FiftyFiftyRight';
 import HorizontalAccordion from '../components/home/HorizontalAccordion';
 import JoinOurTeam from '../components/home/JoinOurTeam';
+import TeamGrid from '../components/home/TeamGrid';
 
 
 export default function Home() {
@@ -55,11 +56,14 @@ export default function Home() {
         <div className="py-20 px-5 text-white exo mx-auto relative">
           <FiftyFiftyRight />
         </div> 
-        <div className="py-20 px-5 text-white exo mx-auto relative">
+        <div className="pt-20 pb-2 px-5 text-white exo mx-auto relative">
           <HorizontalAccordion />
         </div> 
-        <div className="text-white">
+        <div>
           <JoinOurTeam />
+        </div>
+        <div>
+          <TeamGrid />
         </div>
     </motion.main>
   )
