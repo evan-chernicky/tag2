@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent} from "framer-motion"
 import Image from 'next/image'
-import logo from '../../assets/images/TAG_logo2.svg'
+import logo from '../../assets/svgs/TAG_logo2.svg'
 
 type HeaderProps = {
   isVisible: boolean;
