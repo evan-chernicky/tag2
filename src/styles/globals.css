@@ -66,7 +66,7 @@
     border-radius: inherit; /* !importanté */
 	background-image: linear-gradient(171deg, #000, #000, #683D8C, #341F46);
 	background-size: 600% 200%;
-	transition: 0.3s;
+	transition: 0.9s cubic-bezier(.25,.1,.14,.91);
   }
 
   .skew-btn-purple:hover::before {
@@ -192,7 +192,7 @@
 	flex: 0.5;
 	margin: var(--gutter-small);
 	position: relative;
-	transition: all .8s ease-in-out;
+	transition: all 1s ease;
 	overflow: hidden;
   }
 
