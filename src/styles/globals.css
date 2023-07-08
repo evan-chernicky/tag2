@@ -192,7 +192,7 @@
 	flex: 0.5;
 	margin: var(--gutter-small);
 	position: relative;
-	transition: all 700ms ease-in;
+	transition: all .8s ease-in-out;
 	overflow: hidden;
   }
 
@@ -209,6 +209,25 @@
 	border-left: 1px solid #707070;
 	border-right: 1px solid #707070;
 	font-size: 46px;
+  }
+
+  .accordion-title h2 {
+	transition: background-position .8s cubic-bezier(.25,.1,.14,.91);
+	-ms-writing-mode: tb-rl;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #b6b6b6;
+    background-image: linear-gradient(180deg,#616161 0,#fff 50%);
+    background-position-x: 100%;
+	background-position-y: 100%;
+    color: #ffffff;
+    background-size: 100% 200%;
+	transition: background-position .8s cubic-bezier(.25,.1,.14,.91);
+  }
+
+  .accordion-panel.active .accordion-title h2,
+  .accordion-panel:hover .accordion-title h2 {
+	background-position-y: 0;
   }
   
   .accordion-panel:last-of-type h2 {

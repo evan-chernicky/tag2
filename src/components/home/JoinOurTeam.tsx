@@ -13,7 +13,7 @@ function JoinOurTeam() {
             parentSelector?.insertAdjacentHTML('beforeend', clone);
             parentSelector?.insertAdjacentHTML('beforeend', clone);
             parentSelector?.insertAdjacentHTML('beforeend', clone);
-            parentSelector?.insertAdjacentHTML('beforeend', clone);
+            
           
             setInterval(function () {
             firstElement.style.marginLeft = `-${i}px`;
@@ -26,7 +26,7 @@ function JoinOurTeam() {
           }
 
           const timeout = setTimeout(() => {
-            Marquee('.marquee', 0.35);
+            Marquee('.marquee', 0.3);
           }, 0);
         
           return () => clearTimeout(timeout);

@@ -13,7 +13,9 @@ const isActive = (index === 0) ? 'active' : ''
 
   return (
         <div className={`accordion-panel ${isActive}`}>
-        <h2 className="accordion-title">01 Design Service</h2>
+        <div className="accordion-title">
+            <h2>01 Design Service</h2>
+        </div>
         <div className="h-full relative">
             <div className="flex items-center accordion-content h-full absolute left-0 top-0">
                 <div className="mr-12 w-[43%]">
