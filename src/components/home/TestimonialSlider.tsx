@@ -31,9 +31,6 @@ function TestimonialSlider() {
         setCurrentSlide(currentSlide - 1)
     }
 
-    console.log(currentSlide)
-
-
   return (
     <div className="relative bg-gray-gradient max-w-7xl mx-auto flex flex-col items-center justify-center text-white min-h-[432px]">
         <div className="mx-auto text-center max-w-4xl exo">
@@ -42,7 +39,7 @@ function TestimonialSlider() {
                     {currentSlideData?.logo ? <Image src={currentSlideData.logo} alt="army logo"/> : null}
                 </div>
                 <h3 className="text-2xl mb-6 leading-9">“{currentSlideData?.quote}&quot;</h3>
-                <h4 className="text-lg tracking-tight">Gen. James C. Mcconville</h4>
+                <h4 className="text-lg tracking-tight">{currentSlideData?.quotee}</h4>
             </div>        
         </div>
         <div className="absolute bottom-10 flex gap-1.5">
