@@ -9,6 +9,7 @@ function Intro() {
 
     useEffect(() => { 
         const canvas = document.querySelector('canvas') as HTMLCanvasElement;
+        const hero = document.querySelector('#hero') as HTMLElement;
         let progress: number = 0
 
         if (!canvas) return
@@ -23,7 +24,7 @@ function Intro() {
             height: 67,
             shiftX: 1.1,
             shiftY: 1.23,
-            eDashHeight: 2.5,
+            eDashHeight: 1.6,
             get ratio() {
                 return this.height / this.width
             },

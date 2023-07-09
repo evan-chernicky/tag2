@@ -9,6 +9,7 @@ import FiftyFiftyRight from '../components/home/FiftyFiftyRight';
 import HorizontalAccordion from '../components/home/HorizontalAccordion';
 import JoinOurTeam from '../components/home/JoinOurTeam';
 import TeamGrid from '../components/home/TeamGrid';
+import TestimonialSlider from '../components/home/TestimonialSlider';
 
 
 export default function Home() {
@@ -64,6 +65,9 @@ export default function Home() {
         </div>
         <div>
           <TeamGrid />
+        </div>
+        <div className="pt-24">
+          <TestimonialSlider />
         </div>
     </motion.main>
   )

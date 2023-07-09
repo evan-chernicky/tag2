@@ -16,7 +16,7 @@ function JoinOurTeam() {
             
           
             setInterval(function () {
-            firstElement.style.marginLeft = `-${i}px`;
+            firstElement.style.marginRight = `-${i}px`;
               if (i > firstElement.clientWidth) {
                 i = 0;
               }
@@ -26,7 +26,7 @@ function JoinOurTeam() {
           }
 
           const timeout = setTimeout(() => {
-            Marquee('.marquee', 0.3);
+            Marquee('.marquee', 0.4);
           }, 0);
         
           return () => clearTimeout(timeout);

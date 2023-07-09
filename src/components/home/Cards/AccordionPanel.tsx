@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { motion, useAnimate } from 'framer-motion';
+import { motion } from 'framer-motion';
 import SlidePicture from '../../../../assets/images/slide-picture.png'
 
 interface props {
