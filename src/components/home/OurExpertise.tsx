@@ -44,21 +44,21 @@ function OurExpertise() {
                     <Bullseye />
                 </div>
                 <h3 className="text-5xl mt-5">Position</h3>
-                <p className="text-gray mt-3 text-lg">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
+                <p className="text-gray mt-3 text-lg font-exo">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
             </li>
             <li className="flex flex-col justify-start w-1/3 px-3 py-6 gray-gradient">
                 <div className=" w-full flex justify-end space">
                     <Compass />
                 </div>
                 <h3 className="text-5xl mt-5">Navigation</h3>
-                <p className="text-gray mt-3 text-lg">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
+                <p className="text-gray mt-3 text-lg font-exo">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
             </li>
             <li className="flex flex-col justify-start w-1/3 px-3 py-6 gray-gradient">
                 <div className=" w-full flex justify-end space">
                     <Clock />
                 </div>
                 <h3 className="text-5xl mt-5">Timing</h3>
-                <p className="text-gray mt-3 text-lg">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
+                <p className="text-gray mt-3 text-lg font-exo">Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia.</p>
             </li>
         </motion.ul>
     </div>

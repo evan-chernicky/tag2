@@ -17,7 +17,7 @@ function AccordionPanel({isActive}: props) {
             <h2>01 Design Service</h2>
         </div>
         <div className="h-full relative">
-            <div className="flex items-center accordion-content h-full absolute left-0 top-0">  
+            <div className="flex items-center accordion-content h-full absolute left-0 top-0 font-exo">  
                 <div className="mr-12 w-[43%]">
                     <motion.h3 
                         className="text-3xl	mb-5 leading-9"
@@ -28,7 +28,7 @@ function AccordionPanel({isActive}: props) {
                         transition={{duration: 0.3, delay: 0.2, ease: 'easeOut'}}
                     >Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</motion.h3>
                     <motion.p 
-                        className="mb-5"
+                        className="mb-5 font-exo"
                         animate={{
                             opacity: isActive ? 1 : 0,
                             y: isActive ? 0 : 50,
@@ -36,14 +36,14 @@ function AccordionPanel({isActive}: props) {
                         transition={{duration: 0.3, delay: 0.4, ease: 'easeOut'}}
                     >Dicta Sunt Explicabo. Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia. Lorem Ipsum Dolor Sit Amet, Consectetur.</motion.p>
                     <motion.a 
-                        className="skew-btn-purple tracking-widest uppercase text-xs" 
+                        className="skew-btn-purple tracking-widest uppercase text-xs font-exo" 
                         href="#"
                         animate={{
                             opacity: isActive ? 1 : 0,
                             transform: `skew(-21deg) translateY(${isActive ? 0 : 50}px)`,
                         }}
                         transition={{duration: 0.3, delay: 0.6, ease: 'easeOut'}}
-                    ><span>Work With Us</span></motion.a>
+                    ><span>Learn More</span></motion.a>
                 </div>
                 <motion.div 
                     className="w-[57%] mr-auto h-full flex"

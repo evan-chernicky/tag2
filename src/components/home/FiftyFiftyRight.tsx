@@ -6,9 +6,9 @@ function FiftyFiftyRight() {
   return (
     <div className="flex max-w-screen-xl mx-auto px-5 justify-between items-center">
       <div className="mr-28">
-        <h2 className="text-xs font-bold uppercase mb-9 tracking-widest">SYSTEMS INTEGRATION</h2>
-        <p className="text-2xl leading-9 mb-5">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud.</p>
-        <a className="skew-btn-purple tracking-widest uppercase text-xs	" href="#"><span>Work With Us</span></a>
+        <h2 className="text-xs font-bold uppercase mb-9 tracking-widest font-exo">SYSTEMS INTEGRATION</h2>
+        <p className="text-2xl leading-9 mb-5 font-exo">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam Quis Nostrud.</p>
+        <a className="skew-btn-purple tracking-widest uppercase text-xs	font-exo" href="#"><span>Work With Us</span></a>
       </div>
       <Image src={Model} alt="Graph" />
     </div>

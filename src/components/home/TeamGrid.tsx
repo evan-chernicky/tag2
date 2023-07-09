@@ -15,8 +15,8 @@ function TeamGrid() {
         <div className="lg:w-1/3 w-full  flex justify-center items-center bg-gray-gradient">
             <div className="px-4 py-9">
                 <h3 className="text-5xl mb-2">Collaboration</h3>
-                <p className="text-lg mb-5">Lorem Ipsum Dolor Sit Amet, Consectetur.</p>
-                <a className="skew-btn-purple tracking-widest uppercase text-xs	" href="#"><span>Work With Us</span></a>
+                <p className="text-lg mb-5 font-exo">Lorem Ipsum Dolor Sit Amet, Consectetur.</p>
+                <a className="skew-btn-purple tracking-widest uppercase text-xs	font-exo tracking-widest" href="#"><span>Join Our Team</span></a>
             </div>
         </div>
         <div className="lg:w-1/3 w-full">
@@ -25,8 +25,8 @@ function TeamGrid() {
         <div className="lg:w-1/3 w-full flex justify-center items-center bg-gray-gradient">
             <div className="px-4 py-9">
                 <h3 className="text-5xl mb-2">Collaboration</h3>
-                <p className="text-lg mb-5">Lorem Ipsum Dolor Sit Amet, Consectetur.</p>
-                <a className="skew-btn-purple tracking-widest uppercase text-xs	" href="#"><span>Work With Us</span></a>
+                <p className="text-lg mb-5 font-exo">Lorem Ipsum Dolor Sit Amet, Consectetur.</p>
+                <a className="skew-btn-purple tracking-widest uppercase text-xs	font-exo tracking-widest" href="#"><span>Join Our Team</span></a>
             </div>
         </div>
     </div>

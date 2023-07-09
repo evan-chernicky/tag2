@@ -33,13 +33,13 @@ function TesimonialSlide({slideData, currentSlide, slideNumber}: props) {
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
             transition={{delay: 0.3, duration: 0.3}}
-            className="text-2xl mb-6 leading-9 testimonial-stagger"
+            className="text-2xl mb-6 leading-9 testimonial-stagger font-exo"
           >“{slideData?.quote}&quot;</motion.h3>
           <motion.h4 
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
             transition={{delay: 0.6, duration: 0.3}}
-            className="text-lg tracking-tight testimonial-stagger"
+            className="text-lg tracking-tight testimonial-stagger font-exo"
           >{slideData?.quotee}</motion.h4>
       </div>
       )}
