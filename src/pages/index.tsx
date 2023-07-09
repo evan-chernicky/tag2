@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react'
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Intro from '../components/home/Intro';
 import OurExpertise from '../components/home/OurExpertise';
 import Hero from '../components/home/HomeHero';
@@ -69,6 +70,7 @@ export default function Home() {
         <div className="pt-24">
           <TestimonialSlider />
         </div>
+        <Footer/>
     </motion.main>
   )
 }

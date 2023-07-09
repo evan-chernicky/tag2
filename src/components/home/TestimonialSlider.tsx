@@ -33,7 +33,7 @@ function TestimonialSlider() {
   return (
     <div 
     className="relative bg-gray-gradient max-w-7xl mx-auto flex flex-col items-center justify-center text-white min-h-[432px]">
-        <div className="mx-auto text-center max-w-4xl exo py-16">
+        <div className="mx-auto text-center max-w-4xl exo py-16 pb-32">
             {testimonialSlides.map((slideData, index) => <TestimonialSlide key={index} slideData={slideData} slideNumber={index} currentSlide={currentSlide}/>)}
         </div>
         <div className="absolute bottom-10 flex gap-1.5">

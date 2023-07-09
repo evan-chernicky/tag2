@@ -13,7 +13,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gray-gradient': 'linear-gradient(352deg, #070707 0%, #191919 100%)'
+        'gray-gradient': 'linear-gradient(352deg, #070707 0%, #191919 100%)',
+        'footer': 'url("/static/images/footer-background.png")'
       },
       colors: {
         'gray': '#656565',
