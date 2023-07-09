@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Image from 'next/image'
-import { StaticImageData } from 'next/image';
+import TestimonialSlide from './Cards/TestimonialSlide'
 import {testimonialSlides} from '../../data/TestimonialSliderData'
 import PurpleCircle from '../../../assets/svgs/PurpleCircle'
 import LeftArrow from '../../../assets/svgs/LeftArrow'
@@ -32,15 +31,10 @@ function TestimonialSlider() {
     }
 
   return (
-    <div className="relative bg-gray-gradient max-w-7xl mx-auto flex flex-col items-center justify-center text-white min-h-[432px]">
-        <div className="mx-auto text-center max-w-4xl exo">
-            <div>
-                <div className="flex justify-center mb-8">
-                    {currentSlideData?.logo ? <Image src={currentSlideData.logo} alt="army logo"/> : null}
-                </div>
-                <h3 className="text-2xl mb-6 leading-9">“{currentSlideData?.quote}&quot;</h3>
-                <h4 className="text-lg tracking-tight">{currentSlideData?.quotee}</h4>
-            </div>        
+    <div 
+    className="relative bg-gray-gradient max-w-7xl mx-auto flex flex-col items-center justify-center text-white min-h-[432px]">
+        <div className="mx-auto text-center max-w-4xl exo py-16">
+            {testimonialSlides.map((slideData, index) => <TestimonialSlide key={index} slideData={slideData} slideNumber={index} currentSlide={currentSlide}/>)}
         </div>
         <div className="absolute bottom-10 flex gap-1.5">
             {testimonialSlides.map((slide, index) => (

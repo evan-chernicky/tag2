@@ -9,7 +9,6 @@ function Intro() {
 
     useEffect(() => { 
         const canvas = document.querySelector('canvas') as HTMLCanvasElement;
-        const hero = document.querySelector('#hero') as HTMLElement;
         let progress: number = 0
 
         if (!canvas) return
